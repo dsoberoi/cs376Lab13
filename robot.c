@@ -20,7 +20,7 @@
  */
 void robotPrintMessage(void)
 {
-  printf("\n\nDaman really loves robots!\n\n");
+  printf("\n\nPerson2 really loves robots!\n\n");
   return;
 }
 
