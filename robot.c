@@ -20,7 +20,7 @@
  */
 void robotPrintMessage(void)
 {
-  printf("\n\nPerson2 really loves robots!\n\n");
+  printf("\n\nI really love robots!\n\n");
   return;
 }
 
@@ -30,17 +30,38 @@ void robotPrintMessage(void)
  */
 void robotPrintAscii(void)
 {
-  int i;
-  char* blank = "                              ";
-  blank = blank +30;
-  printf("\n\n"
-	 "UWR: Unidentified Wheeled Robot\n"
-	 "%s    i_i    \n"
-	 "%s   [x_x]   \n"
-	 "%s  /|___|\\ \n"
-	 "%s   d   b   \n",blank, blank, blank, blank);
+  printf("\n\n");
+  printf("UWR: Unidentified Wheeled Robot\n");
+  int round = 0;
+  for(int i = 0; i < 3; i++) {
+	printBlanks(10, round);
+  	printf("     i_i    \n");
+	printBlanks(10, round);
+	printf("    [x_x]   \n");
+	printBlanks(10, round);
+	printf("   /|___|\\ \n");
+	printBlanks(10, round);
+	printf("    d   b   \n");
 
-  blank = blank - 10;
+	round++;
+  }
+}
+
+/**
+ * printBlanks
+ *
+ */
+void printBlanks(int initial, int rounds)
+{
+  for(int i = 0; i < initial; i++) {
+	printf(" ");
+  }
+  
+  for(int j = 0; j < rounds; j++) {
+    for(int k = 0; k < initial; k++) {
+	printf(" ");
+    }
+  }
 }
 
 /**

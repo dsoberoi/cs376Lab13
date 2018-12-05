@@ -19,5 +19,5 @@
 void robotPrintMessage(void);
 void robotPrintAscii(void);
 void dalekPrintAscii(void);
-
+void printBlanks(int initial, int rounds); 
 #endif
